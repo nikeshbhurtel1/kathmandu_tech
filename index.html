@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maison Brew | Luxury Coffee House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-logo">MB</div>
+  </div>
+
+  <div id="cookieBanner" class="cookie-banner shadow-lg d-none">
+    <div>
+      <h6>We use cookies</h6>
+      <p class="mb-0">This website uses cookies to improve your browsing experience and remember your preferences.</p>
+    </div>
+    <button class="btn btn-gold ms-lg-3 mt-3 mt-lg-0" id="acceptCookies">Accept</button>
+  </div>
+
+  <nav class="navbar navbar-expand-lg luxury-navbar fixed-top">
+    <div class="container">
+      <a class="navbar-brand logo-mark" href="index.html" onclick="window.location.href='index.html'">Maison Brew</a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link nav-pill active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-pill" href="about.html" target="_blank">About Us</a></li>
+          <li class="nav-item"><a class="nav-link nav-pill" href="order.html" target="_blank">Order Now</a></li>
+          <li class="nav-item"><button class="btn btn-gold nav-contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Us</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section d-flex align-items-center">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-7 reveal-up">
+          <p class="luxury-kicker">Luxury Coffee Collection</p>
+          <h1 class="display-3 fw-bold luxury-title mb-4">A timeless coffee experience, crafted with elegance.</h1>
+          <p class="hero-text luxury-text mb-4">Discover signature coffee drinks presented with a refined, premium feel inspired by luxury-brand storytelling and smooth motion.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="order.html" target="_blank" class="btn btn-gold btn-lg">Order Collection</a>
+            <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Book a Table</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="showcase-section section-space">
+    <div class="container">
+      <div class="section-heading text-center reveal-up">
+        <p class="luxury-kicker">Featured Drinks</p>
+        <h2>Explore our signature coffees</h2>
+      </div>
+
+      <div class="drink-card row align-items-center g-5 reveal-up">
+        <div class="col-lg-6">
+          <div class="image-frame floating-card">
+            <img src="latte.jpg" alt="Latte" class="img-fluid rounded-4">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p class="luxury-kicker">01 / Latte</p>
+          <h3>Latte</h3>
+          <p>A silky espresso-based drink layered with velvety steamed milk and finished with soft foam for a smooth, balanced finish.</p>
+          <div class="drink-meta">Creamy • Elegant • Bestseller</div>
+        </div>
+      </div>
+
+      <div class="drink-card row align-items-center g-5 flex-lg-row-reverse reveal-up">
+        <div class="col-lg-6">
+          <div class="image-frame floating-card">
+            <img src="americano.jpg" alt="Americano" class="img-fluid rounded-4">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p class="luxury-kicker">02 / Americano</p>
+          <h3>Americano</h3>
+          <p>Rich espresso softened with hot water, offering a bold aroma with a clean, long finish for classic coffee lovers.</p>
+          <div class="drink-meta">Bold • Smooth • Classic</div>
+        </div>
+      </div>
+
+      <div class="drink-card row align-items-center g-5 reveal-up">
+        <div class="col-lg-6">
+          <div class="image-frame floating-card">
+            <img src="espresso.jpg" alt="Espresso" class="img-fluid rounded-4">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p class="luxury-kicker">03 / Espresso</p>
+          <h3>Espresso</h3>
+          <p>A concentrated shot with deep character, intense aroma, and a refined golden crema for those who love strong coffee.</p>
+          <div class="drink-meta">Intense • Premium • Pure</div>
+        </div>
+      </div>
+
+      <div class="drink-card row align-items-center g-5 flex-lg-row-reverse reveal-up">
+        <div class="col-lg-6">
+          <div class="image-frame floating-card">
+            <img src="cappuccino.jpg" alt="Cappuccino" class="img-fluid rounded-4">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <p class="luxury-kicker">04 / Cappuccino</p>
+          <h3>Cappuccino</h3>
+          <p>A luxurious harmony of espresso, steamed milk and airy foam, built for a rich and indulgent texture.</p>
+          <div class="drink-meta">Foamy • Refined • Popular</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience-section section-space reveal-up">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <p class="luxury-kicker">Maison Brew Story</p>
+          <h2>Where premium design meets artisan coffee.</h2>
+          <p>Our café is designed for guests who enjoy taste, presentation and atmosphere. Every drink is prepared with care, displayed with elegance and served with a memorable experience.</p>
+        </div>
+        <div class="col-lg-6">
+          <div class="stat-grid">
+            <div class="stat-box"><span>4+</span><p>Signature drinks</p></div>
+            <div class="stat-box"><span>100%</span><p>Freshly prepared</p></div>
+            <div class="stat-box"><span>Luxury</span><p>Interior feeling</p></div>
+            <div class="stat-box"><span>Daily</span><p>Open for orders</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="loyalty-box">
+  <h2>Join Our Loyalty Program</h2>
+  <form id="loyaltyForm">
+    <input type="text" id="loyaltyName" placeholder="Full Name" required>
+    <input type="email" id="loyaltyEmail" placeholder="Email Address" required>
+    <input type="tel" id="loyaltyPhone" placeholder="Phone Number" required>
+    <input type="date" id="loyaltyBirthday" required>
+    <input type="text" id="loyaltyDrink" placeholder="Favourite Drink">
+    <button type="submit">Sign Up</button>
+  </form>
+</div>
+
+  <footer class="footer-section text-center">
+    <div class="container">
+      <h5>Maison Brew</h5>
+      <p class="mb-1">LUXURY COFFEE HOUSE</p>
+      <p class="mb-0">Created by Kathmandu TECH - 2026</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content contact-modal">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Contact Us</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div class="mb-3">
+              <label class="form-label">Customer Name</label>
+              <input type="text" class="form-control" id="customerName" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="customerEmail" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="customerPhone" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Question / Request</label>
+              <textarea class="form-control" id="customerMessage" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold w-100">Save Request</button>
+          </form>
+          <div id="formAlert" class="alert alert-success mt-3 d-none">Your request has been saved in the browser successfully.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
