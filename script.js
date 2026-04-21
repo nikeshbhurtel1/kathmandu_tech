@@ -4,14 +4,12 @@ window.addEventListener('load', () => {
     setTimeout(() => loader.classList.add('hide'), 700);
   }
 });
-
 const navbar = document.querySelector('.luxury-navbar');
 window.addEventListener('scroll', () => {
   if (navbar) {
     navbar.classList.toggle('scrolled', window.scrollY > 40);
   }
 });
-
 const revealElements = document.querySelectorAll('.reveal-up');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -34,12 +32,10 @@ if (acceptCookies) {
     cookieBanner.classList.add('d-none');
   });
 }
-
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
     const contactData = {
       name: document.getElementById('customerName').value,
       email: document.getElementById('customerEmail').value,
@@ -47,41 +43,32 @@ if (contactForm) {
       message: document.getElementById('customerMessage').value,
       time: new Date().toLocaleString()
     };
-
     const existingRequests = JSON.parse(localStorage.getItem('contactRequests')) || [];
     existingRequests.push(contactData);
     localStorage.setItem('contactRequests', JSON.stringify(existingRequests));
-
     document.cookie = `lastCustomer=${encodeURIComponent(contactData.name)}; max-age=604800; path=/`;
-
     const formAlert = document.getElementById('formAlert');
     formAlert.classList.remove('d-none');
     contactForm.reset();
-
     setTimeout(() => {
       formAlert.classList.add('d-none');
     }, 3000);
   });
 }
-
 let cart = JSON.parse(localStorage.getItem('maisonBrewCart')) || [];
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 const cartItemsContainer = document.getElementById('cartItems');
 const cartTotal = document.getElementById('cartTotal');
 const clearCartBtn = document.getElementById('clearCart');
-
 function renderCart() {
   if (!cartItemsContainer || !cartTotal) return;
-
   if (cart.length === 0) {
     cartItemsContainer.innerHTML = '<p class="text-light-emphasis">No items added yet.</p>';
     cartTotal.textContent = '£0.00';
     return;
   }
-
   cartItemsContainer.innerHTML = '';
   let total = 0;
-
   cart.forEach((item, index) => {
     total += item.price;
     const cartItem = document.createElement('div');
@@ -95,17 +82,14 @@ function renderCart() {
     `;
     cartItemsContainer.appendChild(cartItem);
   });
-
   cartTotal.textContent = `£${total.toFixed(2)}`;
   localStorage.setItem('maisonBrewCart', JSON.stringify(cart));
 }
-
 function removeCartItem(index) {
   cart.splice(index, 1);
   renderCart();
 }
 window.removeCartItem = removeCartItem;
-
 addToCartButtons.forEach(button => {
   button.addEventListener('click', () => {
     const item = {
