@@ -421,7 +421,7 @@ h1, h2, h3, h4, h5, .logo-mark {
     outline: none;
     font-size: 14px;
     background: #f5f5f5;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .loyalty-box input:focus {
@@ -440,7 +440,7 @@ h1, h2, h3, h4, h5, .logo-mark {
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .loyalty-box button:hover {
